@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:xo/game_page.dart';
+import 'package:xo/multi_player_page.dart';
+import 'package:xo/single_player_page.dart';
 import 'package:xo/menu_page.dart';
 import 'package:xo/splash_page.dart';
 
@@ -21,7 +22,8 @@ class MyApp extends StatelessWidget {
       routes: {
         '/splash': (context) => const SplashPage(),
         '/menu': (context) => const MenuPage(),
-        '/game-page': (context) => const GamePage(),
+        '/single': (context) => const SinglePlayerPage(),
+        '/multi': (context) => const MultiPlayerPage(),
       },
     );
   }

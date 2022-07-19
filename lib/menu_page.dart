@@ -12,59 +12,70 @@ class _MenuPageState extends State<MenuPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: Widgets.appBar1(),
+      appBar: Widgets.appBar2(),
       body: Center(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            ButtonTheme(
-              minWidth: 200,
+            const SizedBox(
               height: 20,
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  padding: const EdgeInsets.only(left: 100, right: 100),
-                ),
-                child: const Text(
-                  "Single Player",
-                  style: TextStyle(fontSize: 20),
-                ),
-                onPressed: () {
-                  Navigator.pushNamed(context, '/game-page');
-                },
+            ),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(30),
+              child: Image.asset(
+                'assets/icons/xo-game-ico.png',
+                width: 300,
+                height: 300,
               ),
             ),
-            ButtonTheme(
-              minWidth: 200,
+            const SizedBox(
               height: 20,
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  padding: const EdgeInsets.only(left: 100, right: 100),
-                ),
-                child: const Text(
-                  "Multi Player",
-                  style: TextStyle(fontSize: 20),
-                ),
-                onPressed: () {
-                  Navigator.pushNamed(context, '/game-page');
-                },
-              ),
             ),
-            ButtonTheme(
-              minWidth: 200,
-              height: 20,
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  padding: const EdgeInsets.only(left: 100, right: 100),
+            InkWell(
+              child: Container(
+                margin: const EdgeInsets.all(2),
+                decoration: BoxDecoration(
+                  color: Colors.amber,
+                  borderRadius: BorderRadius.circular(10),
                 ),
-                child: const Text(
-                  "Settings",
-                  style: TextStyle(fontSize: 20),
+                width: 300,
+                height: 50,
+                child: Center(
+                  child: Column(
+                    children: const [
+                      Text(
+                        "Single Player",
+                        style: TextStyle(fontSize: 20),
+                      ),
+                      Text("You play O"),
+                    ],
+                  ),
                 ),
-                onPressed: () {
-                  Navigator.pushNamed(context, '/game-page');
-                },
               ),
-            )
+              onTap: () {
+                Navigator.pushNamed(context, '/single');
+              },
+            ),
+            InkWell(
+              child: Container(
+                margin: const EdgeInsets.all(2),
+                decoration: BoxDecoration(
+                  color: Colors.amber,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                width: 300,
+                height: 50,
+                child: const Center(
+                  child: Text(
+                    "Multi Player",
+                    style: TextStyle(fontSize: 20),
+                  ),
+                ),
+              ),
+              onTap: () {
+                Navigator.pushNamed(context, '/multi');
+              },
+            ),
           ],
         ),
       ),

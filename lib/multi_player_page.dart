@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:xo/cell_type.dart';
 import 'package:xo/widgets.dart';
 
-class GamePage extends StatefulWidget {
-  const GamePage({Key? key}) : super(key: key);
+class MultiPlayerPage extends StatefulWidget {
+  const MultiPlayerPage({Key? key}) : super(key: key);
 
   @override
-  State<GamePage> createState() => _GamePageState();
+  State<MultiPlayerPage> createState() => _MultiPlayerPageState();
 }
 
-class _GamePageState extends State<GamePage> {
+class _MultiPlayerPageState extends State<MultiPlayerPage> {
   double h = 0;
   double w = 0;
 

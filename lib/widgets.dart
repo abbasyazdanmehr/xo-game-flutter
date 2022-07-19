@@ -8,6 +8,15 @@ class Widgets {
     );
   }
 
+  static appBar2() {
+    return AppBar(
+      title: const Text("XO Game"),
+      centerTitle: true,
+      leading: Container(),
+      actions: const [],
+    );
+  }
+
   static xIcon() {
     return Center(
       child: Image.asset(
