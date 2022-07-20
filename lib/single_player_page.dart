@@ -239,7 +239,7 @@ class _SinglePlayerPageState extends State<SinglePlayerPage> {
       return;
     }
 
-    if (cells[1] == CellType.blank) {
+    if (cells[4] == CellType.X && cells[1] == CellType.blank) {
       insertInCell(1);
       return;
     }
