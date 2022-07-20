@@ -180,7 +180,6 @@ class _SinglePlayerPageState extends State<SinglePlayerPage> {
       int oes = 0;
       int blankIndex = -1;
 
-      List isOk = [];
       for (var j = 0; j < 3; j++) {
         if (cells[i + 3 * j] == CellType.X) {
           xes++;
@@ -240,18 +239,23 @@ class _SinglePlayerPageState extends State<SinglePlayerPage> {
       return;
     }
 
+    if (cells[1] == CellType.blank) {
+      insertInCell(1);
+      return;
+    }
+
     if (cells[0] == CellType.blank) {
       insertInCell(0);
       return;
     }
 
-    if (cells[2] == CellType.blank) {
-      insertInCell(2);
+    if (cells[6] == CellType.blank) {
+      insertInCell(6);
       return;
     }
 
-    if (cells[6] == CellType.blank) {
-      insertInCell(6);
+    if (cells[2] == CellType.blank) {
+      insertInCell(2);
       return;
     }
 

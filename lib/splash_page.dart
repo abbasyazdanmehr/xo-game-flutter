@@ -14,7 +14,7 @@ class _SplashPageState extends State<SplashPage> {
     super.initState();
     Timer(
       const Duration(seconds: 5),
-      () => Navigator.pushNamed(context, '/menu'),
+      () => Navigator.pushReplacementNamed(context, '/menu'),
     );
   }
 
